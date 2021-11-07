@@ -1,0 +1,24 @@
+extends base.pug
+
+block title
+    title mmunicipio
+
+
+    .container.mt-5(style={width:'45rem'})
+        h1 Nuevo Municipio
+        hr
+        form(action="/nmunicipio" method="post")  
+            .form-group.mt-3 
+                label(for="MunicipioNombre") Nombre de Municipio
+                input#MunicipioNombre.form-control(type="text" name="MunicipioNombre" required="required")
+            
+            .form-group.mt-3
+                label(for="CodigoPostal") Codigo Postal
+                input#CodigoPostal.form-control(type="text" name="CodigoPostal" required="required")
+            
+            .form-group.mt-3
+                .d-grid.gap-3
+                    button.btn.btn-primary Agregar
+
+                .d-grid.gap-2.mt-3
+                    a.btn.btn-success(href="/municipios") Municipios

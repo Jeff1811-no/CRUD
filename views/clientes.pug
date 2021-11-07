@@ -1,0 +1,41 @@
+extends base.pug
+
+block head
+    link(rel="stylesheet", href="css/clientes.css")
+
+block title
+    title Clientes
+    h1.tlo Clientes
+    div.muni
+        a.btn.mun(href="/municipios") Municipios
+    section#tbldatos
+        table.tcliente
+            thead
+                tr
+                th Id
+                th Identificacion
+                th Nombre
+                th Apellido
+                th Telefono
+                th Municipio
+                th
+                    a.btn.new(href="/ncliente") Nuevo
+            tbody 
+                each cliente in clientes
+                    tr  
+                        td #{cliente.idCliente}
+                        td #{cliente.NoIdentificacion}
+                        td #{cliente.ClienteNombre}
+                        td #{cliente.ClienteApellido}
+                        td #{cliente.NoTelefono}
+                        td #{cliente.IdMunicipio}
+                        td 
+                            form(action="mcliente" method="POST")
+                                input#clienteid.form-control(type="text" name="clienteid" value=cliente.idCliente hidden)
+                                Button.modi.btn(type="submit" style='background-color:rgb(235, 109, 25);') Modificar 
+                            form(action="bcliente" method="POST")
+                                input#clienteid.form-control(type="text" name="clienteid" value=cliente.idCliente hidden)
+                                Button.borrar.btn(type="submit" style='background-color:rgb(245, 37, 30);') Borrar
+                            
+                            
+                        

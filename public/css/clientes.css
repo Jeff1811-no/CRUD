@@ -1,0 +1,68 @@
+
+.tcliente{
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px black solid ;
+}
+
+.tcliente tr,td,th{
+    text-align: center;
+    border: 1px black solid ;
+    width: 15%;
+}
+th{
+    background-color:rgb(48, 172, 172);
+}
+.tlo{
+    text-align: center;
+    margin-top: 1rem;
+}
+.tcliente button{
+    width: 90%;
+    margin: 2px;
+    padding: 1px;
+    background-color: dimgray;
+    border-radius: 1%;
+    border-color: black;
+    color: #Fff;
+}
+.mun{
+    color: #fff;
+    background-color:rgb(8, 105, 185);
+}
+.muni{
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: -1rem;
+}
+.new{
+    background-color:rgb(99, 209, 47);
+    color: #Fff;
+    width:100%
+}
+.borrar{
+    background-color:rgb(245, 37, 30);
+    color: #Fff;
+}
+.modi{
+    background-color:rgb(235, 109, 25);
+    color: #Fff;
+}
+.tbla{
+    margin: 1rem;
+    width: 90%;
+}
+
+#tbldatos {
+    margin-top: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+   
+}
+
+#tbldatos thead, td{
+    color: rgb(0, 0, 0);
+}
+

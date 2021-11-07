@@ -1,0 +1,32 @@
+extends base.pug
+
+block head
+    link(rel="stylesheet", href="css/municipios.css")
+
+block title
+    title Municipios
+    h1.tlo Municipios
+    div.muni
+        a.btn.mun(href="/clientes") Clientes
+    section#tbldatos
+        table.tmuni
+            thead
+                th Id
+                th Nombre de Municipio
+                th Codigo Postal
+                th
+                    a.btn.new(href="/nmunicipio") Nuevo
+            tbody 
+                each municipio in municipios
+                    tr  
+                        td #{municipio.idMunicipio}
+                        td #{municipio.MunicipioNombre}
+                        td #{municipio.CodigoPostal}
+                        td 
+                            form(action="mmunicipio" method="POST")
+                                input#idMunicipio.form-control(type="text" name="idMunicipio" value=municipio.idMunicipio hidden)
+                                Button.modi.btn(type="submit" style='background-color:rgb(235, 109, 25);') Modificar
+                            form(action="bmunicipio" method="POST")
+                                input#idMunicipio.form-control(type="text" name="idMunicipio" value=municipio.idMunicipio hidden)
+                                Button.borrar.btn(type="submit" style='background-color:rgb(245, 37, 30);') Borrar
+                            

@@ -1,0 +1,36 @@
+extends base.pug
+
+block title
+    title Register
+
+
+    .container.mt-5(style={width:'45rem'})
+        h1 Nuevo Cliente
+        hr
+        form(action="/ncliente" method="post")
+            .form-group.mt-3
+                label(for="NoIdentificacion") Numero de Identificacion
+                input#NoIdentificacion.form-control(type="text" name="NoIdentificacion" required="required")
+            
+            .form-group.mt-3
+                label(for="ClienteNombre") Nombre de Cliente
+                input#ClienteNombre.form-control(type="text" name="ClienteNombre" required="required")
+            
+            .form-group.mt-3
+                label(for="ClienteApellido") Apellido Cliente
+                input#ClienteApellido.form-control(name="ClienteApellido" required="required")
+
+            .form-group.mt-3
+                label(for="NoTelefono") Numero de Telefono
+                input#NoTelefono.form-control(name="NoTelefono" required="required")
+                 
+            .form-group.mt-3
+                label(for="IdMunicipio") Municipio
+                input#IdMunicipio.form-control(name="IdMunicipio" required="required")
+
+            .form-group.mt-3
+                .d-grid.gap-2
+                    button.btn.btn-primary Agregar
+
+                .d-grid.gap-2.mt-3
+                    a.btn.btn-success(href="/clientes") Volver
